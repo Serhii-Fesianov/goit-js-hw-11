@@ -7,3 +7,5 @@ const refs = {
   gallery: document.querySelector('.js-gallery'),
   btnLoadMore: document.querySelector('.js-load-more'),
 };
+
+const wrapperMarkup = document.querySelector('.gallery');
