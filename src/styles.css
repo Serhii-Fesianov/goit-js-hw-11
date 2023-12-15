@@ -1,3 +1,8 @@
+:root {
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-duration: 250ms;
+}
+
 body {
   background-color: rgb(227, 207, 246);
 }
@@ -13,6 +18,11 @@ header {
 img {
   height: 175px;
   border-radius: 3px;
+  transition: transform var(--animation-duration) var(--timing-function);
+}
+
+img:hover {
+  transform: scale(1.03);
 }
 
 p {
@@ -20,6 +30,10 @@ p {
   font-weight: 500;
   font-stretch: condensed;
   color: rgb(78, 76, 76);
+}
+
+a {
+  text-decoration: none;
 }
 
 .search-form {
@@ -70,6 +84,12 @@ p {
   border: 5px solid rgb(188, 248, 250);
   border-radius: 3px;
   background-color: rgb(188, 248, 250);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.photo-card {
+  cursor: zoom-in;
 }
 
 .info {
@@ -81,5 +101,23 @@ p {
 }
 
 .load-more {
-  display: block;
+  display: none;
+  padding: 10px 20px;
+  margin: 20px auto;
+  background-color: rgb(188, 248, 250);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-style: oblique;
+  font-weight: 500;
+  font-stretch: condensed;
+}
+
+.load-more:hover {
+  background-color: rgb(158, 243, 214);
+}
+/* ====================================================== */
+
+.warning-hint {
+  text-align: center;
 }
