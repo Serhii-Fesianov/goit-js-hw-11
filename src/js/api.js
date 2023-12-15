@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const BASE_URL = 'https://pixabay.com/api';
 
+// axios.defaults.BASE_URL
 // https://pixabay.com/api/?key=41241875-626c3239215a842e842cb8043&q=yellow+flowers&image_type=photo&pretty=true
 
 export const getAllPhotos = async (q, page) => {
@@ -14,6 +15,6 @@ export const getAllPhotos = async (q, page) => {
     orientation: 'horizontal',
     safesearch: true,
   });
-  const { data } = await axios.get(`${BASE_URL}?${params}`);
+  const { data } = await axios.get(`${BASE_URL}/?${params}`);
   return data;
 };
