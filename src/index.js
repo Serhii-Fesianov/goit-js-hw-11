@@ -18,7 +18,7 @@ const refs = {
   btnLoadMore: document.querySelector('.load-more'),
 };
 
-// ============Global let/const============\\
+// ============Global let/const and other============\\
 let page = 1;
 let inputValue = '';
 const hint = document.querySelector('.warning-hint');
